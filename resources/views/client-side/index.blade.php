@@ -1,6 +1,10 @@
 @extends('client-side.layouts.master')
 @section('title','Home')
 @section('index-active', 'active')
+
+@section('header-content')
+    @include('client-side.layouts.header')
+@endsection
 @section('content')
     <!-- Feature Start -->
     <div class="container-xxl py-5">

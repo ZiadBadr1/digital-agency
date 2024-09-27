@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/a', function () {
+    return view('client-side.about');
 });
+
+Route::prefix('/')->name('client-side.')->group(function () {
+
+    Route::view('', 'client-side.index')->name('index');
+
+    Route::view('about', 'client-side.about')->name('about');
+
+    Route::view('contact', 'client-side.contact')->name('contact');
+
+    Route::view('projects', 'client-side.project')->name('projects');
+
+    Route::view('services', 'client-side.service')->name('services');
+
+});
+
