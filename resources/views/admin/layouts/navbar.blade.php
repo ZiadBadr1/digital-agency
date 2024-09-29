@@ -78,10 +78,13 @@
                             <div class="dropdown-divider"></div>
                         </li>
                         <li>
-                            <a class="dropdown-item" href="">
-                                <i class="bx bx-power-off me-2"></i>
-                                <span class="align-middle">Log Out</span>
-                            </a>
+                            <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: inline;">
+                                @csrf
+                                <a href="#" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i class="bx bx-power-off me-2"></i>
+                                    <span class="align-middle">Log Out</span>
+                                </a>
+                            </form>
                         </li>
                     </ul>
                 </li>
