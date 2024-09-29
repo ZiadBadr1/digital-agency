@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/a', function () {
-    return view('client-side.about');
+    return view('admin.dashboard');
 });
 
 Route::prefix('/')->name('client-side.')->group(function () {
