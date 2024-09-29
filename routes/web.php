@@ -18,6 +18,10 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('/')->name('admin.')->middleware('auth:admin')->group(function () {
     Route::get('dashboard', [LoginController::class,'index'])->name('dashboard');
     Route::post('logout', [LoginController::class,'logout'])->name('logout');
+    Route::get('settings',function (){
+        return view('admin.settings.setting');
+    });
+
 });
 
 Route::get('/login', function () {
