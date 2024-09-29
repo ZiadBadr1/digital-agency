@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/a', function () {
-    return view('admin.dashboard');
+    return view('admin.auth.login');
 });
 
 Route::prefix('/')->name('client-side.')->group(function () {
