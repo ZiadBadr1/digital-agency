@@ -23,6 +23,7 @@
             </div>
         </div>
         @livewire('admin.skills.update-skill')
+        @livewire('admin.skills.delete-skill')
     </div>
     <!-- / Content -->
 @endsection

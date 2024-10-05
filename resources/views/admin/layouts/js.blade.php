@@ -40,4 +40,7 @@
     window.addEventListener('updateModalToggle', event => {
         $('#updateModal').modal('toggle');
     })
+    window.addEventListener('deleteModalToggle', event => {
+        $('#deleteModal').modal('toggle');
+    })
 </script>
