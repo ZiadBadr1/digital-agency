@@ -20,7 +20,10 @@ Route::prefix('/')->name('admin.')->middleware('auth:admin')->group(function () 
     Route::post('logout', [LoginController::class,'logout'])->name('logout');
     Route::get('settings',function (){
         return view('admin.settings.setting');
-    });
+    })->name('settings');
+    Route::get('skills',function (){
+        return view('admin.skills.skills');
+    })->name('skills');
 
 });
 

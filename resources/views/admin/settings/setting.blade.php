@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('settings-active', 'active')
+@section('setting', 'active')
 @section('title', 'Settings')
 
 @section('content')
