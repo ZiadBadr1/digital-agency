@@ -14,7 +14,7 @@ class CreateSkill extends Component
         $attributes =  $this->validate((new SkillRequest())->rules());
         Skill::create($attributes);
         $this->reset(['name', 'progress']);
-        $this->dispatch('createModalToggle');
+        $this->dispatch('modalToggle', ['modalId' => 'createModal']);
         $this->dispatch('refreshData')->to(SkillsData::class);
     }
     public function render()

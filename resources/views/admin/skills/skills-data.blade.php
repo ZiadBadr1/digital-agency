@@ -2,7 +2,6 @@
     <div class="mb-3">
         <input type="text" class="form-control w-25" placeholder="Search" wire:model.live='search'>
     </div>
-
     <div class="table-responsive text-nowrap">
         @if (count($data) > 0)
             <table class="table">
@@ -27,6 +26,10 @@
                                     <i class="bx bx-dots-vertical-rounded"></i>
                                 </button>
                                 <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#"
+                                       wire:click.prevent="$dispatch('showSkill', { id: {{ $record->id }} })">
+                                        <i class="bx bx-show me-1"></i>
+                                        Show</a>
                                     <a class="dropdown-item" href="#"
                                        wire:click.prevent="$dispatch('updateSkill', { id: {{ $record->id }} })">
                                         <i class="bx bx-edit-alt me-1"></i>

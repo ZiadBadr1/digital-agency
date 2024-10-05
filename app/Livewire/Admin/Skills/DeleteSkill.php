@@ -13,12 +13,12 @@ class DeleteSkill extends Component
     public function deleteSkill($id)
     {
         $this->skill = Skill::find($id);
-        $this->dispatch('deleteModalToggle');
+        $this->dispatch('modalToggle', ['modalId' => 'deleteModal']);
     }
     public function submit(): void
     {
         $this->skill->delete();
-        $this->dispatch('deleteModalToggle');
+        $this->dispatch('modalToggle', ['modalId' => 'deleteModal']);
         $this->dispatch('refreshData')->to(SkillsData::class);
     }
     public function render()

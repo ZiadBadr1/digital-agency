@@ -34,13 +34,8 @@
             }
         })
     });
-    window.addEventListener('createModalToggle', event => {
-        $('#createModal').modal('toggle');
-    })
-    window.addEventListener('updateModalToggle', event => {
-        $('#updateModal').modal('toggle');
-    })
-    window.addEventListener('deleteModalToggle', event => {
-        $('#deleteModal').modal('toggle');
-    })
+    window.addEventListener('modalToggle', event => {
+        const modalId = event.detail[0].modalId;
+        $(`#${modalId}`).modal('toggle');
+    });
 </script>

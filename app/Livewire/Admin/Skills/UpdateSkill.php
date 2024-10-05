@@ -17,14 +17,14 @@ class UpdateSkill extends Component
         $this->skill = Skill::find($id);
         $this->name = $this->skill->name;
         $this->progress = $this->skill->progress;
-        $this->dispatch('updateModalToggle');
+        $this->dispatch('modalToggle', ['modalId' => 'updateModal']);
     }
 
     public function submit(): void
     {
         $attributes =  $this->validate((new SkillRequest())->rules());
         $this->skill->update($attributes);
-        $this->dispatch('updateModalToggle');
+        $this->dispatch('modalToggle', ['modalId' => 'updateModal']);
         $this->dispatch('refreshData')->to(SkillsData::class);
     }
     public function render()
