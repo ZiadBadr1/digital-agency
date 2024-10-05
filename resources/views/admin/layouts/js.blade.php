@@ -37,4 +37,7 @@
     window.addEventListener('createModalToggle', event => {
         $('#createModal').modal('toggle');
     })
+    window.addEventListener('updateModalToggle', event => {
+        $('#updateModal').modal('toggle');
+    })
 </script>

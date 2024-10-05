@@ -2,24 +2,16 @@
 
 namespace App\Livewire\Admin\Skills;
 
+use App\Http\Requests\Admin\Skills\SkillRequest;
 use App\Models\Skill;
 use Livewire\Component;
 
 class CreateSkill extends Component
 {
     public $name , $progress;
-
-    public function rules(): array
+    public function submit(): void
     {
-        return [
-            'name' => ['required', 'string'],
-            'progress' => ['required', 'integer']
-        ];
-    }
-
-    public function submit()
-    {
-        $attributes =  $this->validate();
+        $attributes =  $this->validate((new SkillRequest())->rules());
         Skill::create($attributes);
         $this->reset(['name', 'progress']);
         $this->dispatch('createModalToggle');
