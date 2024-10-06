@@ -8,14 +8,12 @@
                 wire:model="email"
                 autofocus
         />
-        @error('email')
-            <p class="text-danger">{{$message}}</p>
-        @enderror
+        @include('admin.Enhance.error',['name'=>'email'])
     </div>
     <div class="mb-3 form-password-toggle">
         <div class="d-flex justify-content-between">
             <label class="form-label" for="password">Password</label>
-            <a href="auth-forgot-password-basic.html">
+            <a href="">
                 <small>Forgot Password?</small>
             </a>
         </div>
@@ -30,9 +28,7 @@
             />
             <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
         </div>
-        @error('password')
-        <p class="text-danger">{{$message}}</p>
-        @enderror
+        @include('admin.Enhance.error',['name'=>'password'])
     </div>
     <div class="mb-3">
         <div class="form-check">
@@ -41,15 +37,6 @@
         </div>
     </div>
     <div class="mb-3">
-        <button class="btn btn-primary d-grid w-100" type="submit">
-            <span wire:loading.remove>
-                Sign in
-            </span>
-        <div class="text-center">
-        <div class="spinner-border spinner-border-sm text-white" role="status" wire:loading="submit">
-            <span class="visually-hidden" >Loading...</span>
-        </div>
-        </div>
-        </button>
+       @include('admin.Enhance.loading',['buttonName'=> "Sign in"])
     </div>
 </form>
