@@ -2,7 +2,7 @@
 
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-        <a href="" class="app-brand-link">
+        <a href="{{route('admin.dashboard')}}" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg
                         width="25"
@@ -80,6 +80,12 @@
             <a href="{{route('admin.skills')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-brain"></i>
                 <div data-i18n="Analytics">Skills</div>
+            </a>
+        </li>
+        <li class="menu-item @yield('subscriber')">
+            <a href="{{route('admin.subscriber')}}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-user"></i>
+                <div data-i18n="Analytics">Subscribers</div>
             </a>
         </li>
         <li class="menu-item @yield('setting')">

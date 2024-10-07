@@ -37,6 +37,8 @@
         </div>
     </div>
     <div class="mb-3">
+        <button class="btn btn-primary">
        @include('admin.Enhance.loading',['buttonName'=> "Sign in"])
+        </button>
     </div>
 </form>

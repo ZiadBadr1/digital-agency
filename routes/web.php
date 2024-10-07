@@ -24,7 +24,9 @@ Route::prefix('/')->name('admin.')->middleware('auth:admin')->group(function () 
     Route::get('skills',function (){
         return view('admin.skills.skills');
     })->name('skills');
-
+    Route::get('subscriber',function (){
+        return view('admin.subscriber.subscriber');
+    })->name('subscriber');
 });
 
 Route::get('/login', function () {
