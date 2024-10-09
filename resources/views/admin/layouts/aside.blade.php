@@ -100,6 +100,12 @@
                 <div data-i18n="Analytics">Services</div>
             </a>
         </li>
+        <li class="menu-item @yield('messages')">
+            <a href="{{route('admin.messages')}}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-message"></i>
+                <div data-i18n="Analytics">Messages</div>
+            </a>
+        </li>
         <li class="menu-item @yield('setting')">
             <a href="{{route('admin.settings')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-cog"></i>

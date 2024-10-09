@@ -1,5 +1,5 @@
 @extends('admin.layouts.master')
-@section('message', 'active')
+@section('messages', 'active')
 @section('title', 'Message')
 
 @section('content')
