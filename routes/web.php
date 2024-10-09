@@ -33,6 +33,9 @@ Route::prefix('/')->name('admin.')->middleware('auth:admin')->group(function () 
     Route::get('service',function (){
         return view('admin.services.service');
     })->name('service');
+    Route::get('messages',function (){
+        return view('admin.messages.message');
+    })->name('messages');
 });
 
 Route::get('/login', function () {
