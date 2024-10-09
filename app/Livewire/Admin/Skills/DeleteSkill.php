@@ -10,7 +10,7 @@ class DeleteSkill extends Component
     public $skill;
     protected $listeners = ['deleteSkill'];
 
-    public function deleteSkill($id)
+    public function deleteSkill($id): void
     {
         $this->skill = Skill::find($id);
         $this->dispatch('modalToggle', ['modalId' => 'deleteModal']);

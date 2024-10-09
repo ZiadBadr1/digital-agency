@@ -30,6 +30,9 @@ Route::prefix('/')->name('admin.')->middleware('auth:admin')->group(function () 
     Route::get('counter',function (){
         return view('admin.counter.counter');
     })->name('counter');
+    Route::get('service',function (){
+        return view('admin.services.service');
+    })->name('service');
 });
 
 Route::get('/login', function () {

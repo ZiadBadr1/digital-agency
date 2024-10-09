@@ -94,6 +94,12 @@
                 <div data-i18n="Analytics">Counters</div>
             </a>
         </li>
+        <li class="menu-item @yield('service')">
+            <a href="{{route('admin.service')}}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-briefcase"></i>
+                <div data-i18n="Analytics">Services</div>
+            </a>
+        </li>
         <li class="menu-item @yield('setting')">
             <a href="{{route('admin.settings')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-cog"></i>
