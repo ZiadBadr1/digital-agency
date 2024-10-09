@@ -7,7 +7,9 @@
             <table class="table">
                 <thead>
                 <tr>
-                    <th width="90%">Name</th>
+                    <th width="50%">Name</th>
+                    <th width="20%">Counter</th>
+                    <th width="20%">Icon</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -15,7 +17,12 @@
                 @foreach ($data as $record)
                     <tr>
                         <td>
-                            <strong>{{ $record->email }}</strong>
+                            <strong>{{ $record->name }}</strong>
+                        </td>
+                        <td>{{ $record->count }}</td>
+                        <td>
+                            <i class="{{$record->icon }} text-secondary mb-3">
+                            </i>
                         </td>
                         <td>
                             <div class="dropdown">
@@ -24,7 +31,15 @@
                                     <i class="bx bx-dots-vertical-rounded"></i>
                                 </button>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#" wire:click.prevent="$dispatch('deleteSubscriber',{ id: {{ $record->id }} })"><i
+                                    <a class="dropdown-item" href="#"
+                                       wire:click.prevent="$dispatch('showCounter', { id: {{ $record->id }} })">
+                                        <i class="bx bx-show me-1"></i>
+                                        Show</a>
+                                    <a class="dropdown-item" href="#"
+                                       wire:click.prevent="$dispatch('updateCounter', { id: {{ $record->id }} })">
+                                        <i class="bx bx-edit-alt me-1"></i>
+                                        Edit</a>
+                                    <a class="dropdown-item" href="#" wire:click.prevent="$dispatch('deleteCounter',{ id: {{ $record->id }} })"><i
                                                 class="bx bx-trash me-1"></i>
                                         Delete</a>
                                 </div>

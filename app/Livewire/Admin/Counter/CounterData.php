@@ -1,26 +1,26 @@
 <?php
 
-namespace App\Livewire\Admin\Subscriber;
+namespace App\Livewire\Admin\Counter;
 
-use App\Models\Subscriber;
+use App\Models\Counter;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class SubscriberData extends Component
+class CounterData extends Component
 {
-    public $search ;
     use WithPagination;
+    public $search ;
 
     protected $listeners = ['refreshData' => '$refresh'];
+
     public function updatingSearch(): void
     {
         $this->resetPage();
     }
-
     public function render()
     {
-        return view('admin.subscriber.subscriber-data',[
-            'data' => Subscriber::where('email','like','%'. $this->search .'%')->paginate(10),
+        return view('admin.counter.counter-data',[
+            'data' => Counter::where('name','like','%'.$this->search.'%')->paginate(10)
         ]);
     }
 }

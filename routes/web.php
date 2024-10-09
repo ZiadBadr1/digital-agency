@@ -27,6 +27,9 @@ Route::prefix('/')->name('admin.')->middleware('auth:admin')->group(function () 
     Route::get('subscriber',function (){
         return view('admin.subscriber.subscriber');
     })->name('subscriber');
+    Route::get('counter',function (){
+        return view('admin.counter.counter');
+    })->name('counter');
 });
 
 Route::get('/login', function () {

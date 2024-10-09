@@ -10,7 +10,7 @@
 
             <button type="button" class="btn btn-sm btn-primary mb-2 mx-2" data-bs-toggle="modal"
                     data-bs-target="#createModal">
-                Add New
+                Add New Skills
             </button>
 
             @livewire('admin.skills.create-skill')
