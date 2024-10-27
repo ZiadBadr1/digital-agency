@@ -39,6 +39,9 @@ Route::prefix('/')->name('admin.')->middleware('auth:admin')->group(function () 
     Route::get('categories',function (){
         return view('admin.category.category');
     })->name('categories');
+    Route::get('projects',function (){
+        return view('admin.project.project');
+    })->name('projects');
 });
 
 Route::get('/login', function () {
@@ -53,7 +56,7 @@ Route::prefix('/')->name('client-side.')->group(function () {
 
     Route::view('contact', 'client-side.contact')->name('contact');
 
-    Route::view('projects', 'client-side.project')->name('projects');
+//    Route::view('projects', 'client-side.project')->name('projects');
 
     Route::view('services', 'client-side.service')->name('services');
 
