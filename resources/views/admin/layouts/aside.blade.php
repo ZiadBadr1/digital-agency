@@ -118,6 +118,12 @@
                 <div data-i18n="Analytics">Projects</div>
             </a>
         </li>
+        <li class="menu-item @yield('members')">
+            <a href="{{route('admin.members')}}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-group"></i> 
+                <div data-i18n="Analytics">Members</div>
+            </a>
+        </li>
         <li class="menu-item @yield('testimonial')">
             <a href="{{route('admin.testimonials')}}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-comment"></i>

@@ -45,6 +45,9 @@ Route::prefix('/')->name('admin.')->middleware('auth:admin')->group(function () 
     Route::get('testimonials',function (){
         return view('admin.testmonial.testmonial');
     })->name('testimonials');
+    Route::get('members',function (){
+        return view('admin.member.members');
+    })->name('members');
 });
 
 Route::get('/login', function () {
