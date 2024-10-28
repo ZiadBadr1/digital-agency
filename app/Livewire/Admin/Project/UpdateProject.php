@@ -35,7 +35,7 @@ class UpdateProject extends Component
     public function updatedTemporaryImage(): void
     {
         $this->validate([
-            'temporaryImage' => ['required','mimes:jpg,png,jpeg'],
+            'temporaryImage' => ['nullable','mimes:jpg,png,jpeg'],
         ]);
         $this->image = $this->temporaryImage;
     }

@@ -42,6 +42,9 @@ Route::prefix('/')->name('admin.')->middleware('auth:admin')->group(function () 
     Route::get('projects',function (){
         return view('admin.project.project');
     })->name('projects');
+    Route::get('testimonials',function (){
+        return view('admin.testmonial.testmonial');
+    })->name('projects');
 });
 
 Route::get('/login', function () {
