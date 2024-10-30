@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\ClientSide\ClientSideController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,39 +17,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::prefix('/')->name('admin.')->middleware('auth:admin')->group(function () {
+Route::prefix('/admin')->name('admin.')->middleware('auth:admin')->group(function () {
     Route::get('dashboard', [LoginController::class,'index'])->name('dashboard');
     Route::post('logout', [LoginController::class,'logout'])->name('logout');
-    Route::get('settings',function (){
-        return view('admin.settings.setting');
-    })->name('settings');
-    Route::get('skills',function (){
-        return view('admin.skills.skills');
-    })->name('skills');
-    Route::get('subscriber',function (){
-        return view('admin.subscriber.subscriber');
-    })->name('subscriber');
-    Route::get('counter',function (){
-        return view('admin.counter.counter');
-    })->name('counter');
-    Route::get('service',function (){
-        return view('admin.services.service');
-    })->name('service');
-    Route::get('messages',function (){
-        return view('admin.messages.message');
-    })->name('messages');
-    Route::get('categories',function (){
-        return view('admin.category.category');
-    })->name('categories');
-    Route::get('projects',function (){
-        return view('admin.project.project');
-    })->name('projects');
-    Route::get('testimonials',function (){
-        return view('admin.testmonial.testmonial');
-    })->name('testimonials');
-    Route::get('members',function (){
-        return view('admin.member.members');
-    })->name('members');
+
+    Route::get('settings',[DashboardController::class,'settings'])->name('settings');
+    Route::get('skills',[DashboardController::class,'skills'])->name('skills');
+    Route::get('subscriber',[DashboardController::class,'subscriber'])->name('subscriber');
+    Route::get('counter',[DashboardController::class,'counter'])->name('counter');
+    Route::get('service',[DashboardController::class,'service'])->name('service');
+    Route::get('messages',[DashboardController::class,'messages'])->name('messages');
+    Route::get('projects',[DashboardController::class,'projects'])->name('projects');
+    Route::get('categories',[DashboardController::class,'categories'])->name('categories');
+    Route::get('testimonials',[DashboardController::class,'testimonials'])->name('testimonials');
+    Route::get('members',[DashboardController::class,'members'])->name('members');
 });
 
 Route::get('/login', function () {
@@ -56,15 +39,15 @@ Route::get('/login', function () {
 
 Route::prefix('/')->name('client-side.')->group(function () {
 
-    Route::view('', 'client-side.index')->name('index');
+    Route::get('',[ClientSideController::class,'home'])->name('index');
 
-    Route::view('about', 'client-side.about')->name('about');
+    Route::get('about', [ClientSideController::class,'about'])->name('about');
 
-    Route::view('contact', 'client-side.contact')->name('contact');
+    Route::get('contact', [ClientSideController::class,'contact'])->name('contact');
 
-//    Route::view('projects', 'client-side.project')->name('projects');
+    Route::get('projects', [ClientSideController::class,'projects'])->name('projects');
 
-    Route::view('services', 'client-side.service')->name('services');
+    Route::get('services', [ClientSideController::class,'services'])->name('services');
 
 });
 
