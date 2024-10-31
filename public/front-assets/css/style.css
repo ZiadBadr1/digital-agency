@@ -467,8 +467,17 @@ h6,
 /*** Testimonial ***/
 .testimonial-carousel .testimonial-item {
     padding: 0 30px 30px 30px;
+    height:230px !important;
 }
-
+.testimonial-item .testim-text{
+    overflow: hidden;
+    height: 97px;
+}
+.img-card{
+    height: 300px;
+    width: auto;
+    border-radius: 15px !important;
+}
 .testimonial-carousel .owl-nav {
     display: flex;
     justify-content: center;

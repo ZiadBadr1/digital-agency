@@ -6,7 +6,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="{{asset("front-assets/img/favicon.ico")}}" rel="icon">
+    <link rel="icon" type="image/x-icon" href="{{asset('back-assets/img/favicon/favicon.ico')}}" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
