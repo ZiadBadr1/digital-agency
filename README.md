@@ -43,8 +43,8 @@ Password: 123456
 
 If you’d like to reach me:
 
-Email: ziadbadr5947@gmail.com
-**LinkedIn**: [Ziad Mahmoud Badr](https://www.linkedin.com/in/ziad-mahmoud-badr-8452ba1ba/)
+- **Email**: [ziadbadr5947@gmail.com](mailto:ziadbadr5947@gmail.com)  
+- **LinkedIn**: [Ziad Mahmoud Badr](https://www.linkedin.com/in/ziad-mahmoud-badr-8452ba1ba/)  
 
 
 ## ⚙️ Installation
@@ -71,8 +71,5 @@ php artisan migrate --seed
 # Start the development server
 php artisan serve
 
-
-
-
 # Start the development server
-php artisan serve
+php artisan s
