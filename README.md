@@ -3,7 +3,7 @@
 This is my first project built with **Laravel** and **Livewire** as a practice project.  
 It represents a digital agency/company profile with an **Admin Dashboard** to manage content and a **Frontend** built with Blade templates.
 
-![Website Screenshot](screencapture-digital-agency-test.png)
+![Website Screenshot](public/images/screenshot.png)
 
 ## 📌 Features
 - **Authentication**: Admin login to manage the dashboard  
@@ -23,7 +23,7 @@ All modules are fully manageable from the **Admin Dashboard** and integrated int
 - **Livewire** (for dynamic components in the dashboard)  
 - **Blade** (for frontend)  
 - **MySQL**  
-- **TailwindCSS / Bootstrap** (depending on what you used)
+- **TailwindCSS / Bootstrap**
 
 ## ⚙️ Installation
 ```bash
