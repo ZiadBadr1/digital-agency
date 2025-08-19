@@ -48,3 +48,28 @@ php artisan migrate --seed
 
 # Start the development server
 php artisan serve
+
+🚀 Usage
+
+Visit / to see the Frontend Website
+
+Visit /admin to access the Dashboard Login Page
+
+🔑 Demo Admin Access
+
+To log in to the dashboard, use the following credentials:
+
+Email: ziad@admin.com
+
+Password: 123456
+
+📧 Contact Me
+
+If you’d like to reach me:
+
+Email: ziadbadr5947@gmail.com
+
+**LinkedIn**: [Ziad Mahmoud Badr](https://www.linkedin.com/in/ziad-mahmoud-badr-8452ba1ba/)
+
+# Start the development server
+php artisan serve
